@@ -1,8 +1,8 @@
 from typing import Tuple
 
 
-def parse_line(dir: str, turns: int, starting_position: int) -> Tuple[int, int]:
-    position = starting_position
+def parse_line(dir: str, turns: int, start: int) -> Tuple[int, int]:
+    position = start
     line_count = 0
 
     for i in range(turns):
@@ -24,7 +24,7 @@ def parse_line(dir: str, turns: int, starting_position: int) -> Tuple[int, int]:
     return line_count, position
 
 
-with open("test.txt", "r") as f:
+with open("full.txt", "r") as f:
     data = f.read().splitlines()
 
 dial = 50
